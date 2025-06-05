@@ -9,6 +9,9 @@ namespace MIPrimerApi.DAL.Entities
         [Required(ErrorMessage = "El campo {0} es requerido.")]
         public string Name { get; set; } = string.Empty; // Nombre del país
         public string? Currency { get; set; } // Moneda del país 
-       
+
+        [Display(Name = "Estados/Departamento")]
+        public ICollection<State>? States { get; set; }
+
     }
 }
